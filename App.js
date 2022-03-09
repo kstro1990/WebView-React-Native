@@ -1,12 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import WebView from 'react-native-webview';
+
+const urlTex="https://tiendaporinternet.com/lightbox/"
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <WebView
+        source={{uri:urlTex}}
+        style={{ marginTop: 20 }}
+        originWhitelist={['*']}
+      />
   );
 }
 
